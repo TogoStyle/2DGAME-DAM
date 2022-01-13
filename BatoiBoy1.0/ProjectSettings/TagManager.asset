@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - zoom
+  - mobilePlattform
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Foreground
   - Ground
   - Columns
-  - 
+  - Zoom
   - 
   - 
   - 
@@ -55,4 +57,7 @@ TagManager:
     locked: 0
   - name: Columns
     uniqueID: 1449937937
+    locked: 0
+  - name: Zoom
+    uniqueID: 4159816405
     locked: 0

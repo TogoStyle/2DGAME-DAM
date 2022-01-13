@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Character : MonoBehaviour
 {
@@ -23,22 +24,22 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.Linecast (transform.position,
+        grounded = Physics2D.Linecast(transform.position,
             groundCheck.position,
-            LayerMask.GetMask ("Ground"));
-        if (grounded && Input.GetButtonDown ("Jump"))
-            rigidbody2d.AddForce (Vector2.up * jumpMovement);
+            LayerMask.GetMask("Ground"));
+        if (grounded && Input.GetButtonDown("Jump"))
+            rigidbody2d.AddForce(Vector2.up * jumpMovement);
         if (grounded)
-            animator.SetTrigger ("Grounded");
+            animator.SetTrigger("Grounded");
         else
-            animator.SetTrigger ("Jump");
-        Speed = lateralMovement * Input.GetAxis ("Horizontal");
-        transform.Translate (Vector2.right * Speed * Time.deltaTime);
+            animator.SetTrigger("Jump");
+        Speed = lateralMovement * Input.GetAxis("Horizontal");
+        transform.Translate(Vector2.right * Speed * Time.deltaTime);
         animator.SetFloat("Speed", Mathf.Abs(Speed));
         if (Speed < 0)
-            transform.localScale = new Vector3 (-5, 5, 5);
+            transform.localScale = new Vector3(-5, 5, 5);
         else
-            transform.localScale = new Vector3 (5, 5, 5);
+            transform.localScale = new Vector3(5, 5, 5);
 
         // if (grounded && Input.GetKey(KeyCode.Mouse0))
         // {
@@ -51,4 +52,24 @@ public class Character : MonoBehaviour
         //     animator.SetTrigger("Grounded");
         // }
     }
-}
+
+    void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("zoom"))
+                GameObject.Find("MainVirtual").GetComponent<CinemachineVirtualCamera>().enabled = false;
+        }
+        void OnTriggerExit2D(Collider2D other)
+        {
+            if (other.CompareTag("zoom"))
+                GameObject.Find("MainVirtual").GetComponent<CinemachineVirtualCamera>().enabled = true;
+        }
+        
+        void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.CompareTag("mobilePlattform"))
+        transform.SetParent (other.transform);
+        }
+        void OnCollisionExit2D(Collision2D other) {
+        if (other.gameObject.CompareTag("mobilePlattform"))
+        transform.SetParent (null);
+        }
+    }
