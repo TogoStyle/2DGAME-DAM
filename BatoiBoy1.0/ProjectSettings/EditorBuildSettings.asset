@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bosque.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cueva.unity
+    guid: c3f64b12e82a5b5dfbf80fb74ae03d0e
+  - enabled: 1
+    path: Assets/Scenes/Castle.unity
+    guid: 75815ae08fb353148952492c58489fdd
   m_configObjects: {}
