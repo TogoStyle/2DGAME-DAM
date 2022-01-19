@@ -19,7 +19,7 @@ TagManager:
   - Ground
   - Columns
   - Zoom
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -60,4 +60,7 @@ TagManager:
     locked: 0
   - name: Zoom
     uniqueID: 4159816405
+    locked: 0
+  - name: Enemy
+    uniqueID: 1925829859
     locked: 0

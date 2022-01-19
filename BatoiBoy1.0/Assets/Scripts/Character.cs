@@ -14,6 +14,15 @@ public class Character : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public bool grounded = true;
     
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    private Animator playerAnim;
+    public Transform attackPos;
+    public LayerMask whatIsEnemies;
+    public float attackRange;
+    public int damage;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,17 +50,13 @@ public class Character : MonoBehaviour
         else
             transform.localScale = new Vector3(5, 5, 5);
 
-        // if (grounded && Input.GetKey(KeyCode.Mouse0))
-        // {
-        //     
-        //     animator.SetTrigger("Attack");
-        //     return;
-        // }
-        // else
-        // {
-        //     animator.SetTrigger("Grounded");
-        // }
+
+        
+       
     }
+
+   
+
 
     void OnTriggerEnter2D(Collider2D other)
         {
