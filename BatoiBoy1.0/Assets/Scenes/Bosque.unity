@@ -14219,7 +14219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0
-  lateralMovement: 2
+  lateralMovement: 4
   jumpMovement: 400
   groundCheck: {fileID: 1973467908}
   grounded: 1

@@ -7,7 +7,7 @@ public class Character : MonoBehaviour
 {
 
     public float Speed = 0.0f;
-    public float lateralMovement = 2.0f;
+    public float lateralMovement = 4.0f;
     public float jumpMovement = 400.0f;
     public Transform groundCheck;
     private Animator animator;
