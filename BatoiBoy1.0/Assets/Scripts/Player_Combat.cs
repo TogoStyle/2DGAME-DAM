@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,12 @@ using UnityEngine;
 public class Player_Combat : MonoBehaviour
 {
 
+    public LayerMask enemyLayers;
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
     public Animator animator;
+    public int attackDamage = 40;
+    
 
     // Update is called once per frame
     void Update()
@@ -20,6 +26,20 @@ public class Player_Combat : MonoBehaviour
     public void Attack()
     {
         animator.SetTrigger("Attack");
+       Collider2D[] hitEnemies =  Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+       foreach (Collider2D enemy in hitEnemies)
+       {
+           enemy.GetComponent<Enemy>().Takedamage(attackDamage);
+       }
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+        {
+            return;
+        }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }
 
