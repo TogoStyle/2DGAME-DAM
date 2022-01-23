@@ -21,7 +21,7 @@ TagManager:
   - Zoom
   - Enemy
   - Enemies
-  - 
+  - Player
   - 
   - 
   - 
@@ -63,4 +63,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1925829859
+    locked: 0
+  - name: Player
+    uniqueID: 2185513151
     locked: 0
