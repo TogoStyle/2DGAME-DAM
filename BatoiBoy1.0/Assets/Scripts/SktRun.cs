@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SktRun : StateMachineBehaviour
 {
@@ -31,8 +32,10 @@ public class SktRun : StateMachineBehaviour
         if (Vector2.Distance(player.position, rb.position) <= attackRange)
         {
             animator.SetTrigger("AttackEnemy");
+           
         }
-
+        
+        
         
     }
 
@@ -41,5 +44,7 @@ public class SktRun : StateMachineBehaviour
     {
         animator.ResetTrigger("AttackEnemy");
     }
+    
+    
     
 }
