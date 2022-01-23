@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class Enemy_behaviour : MonoBehaviour
@@ -11,19 +12,23 @@ public class Enemy_behaviour : MonoBehaviour
     public float attackDistance;
     public float moveSpeed;
     public float timer;
+    public Transform leftLimt;
+    public Transform righLimit;
 
     private RaycastHit2D hit;
-    private GameObject target;
+    private Transform target;
     private Animator anim;
     private float distance;
     private bool attackMode;
     private bool inRange;
     private bool cooling;
     private float intTimer;
+    
 
 
     void Awake()
     {
+        SelectTarget();
         intTimer = timer;
         anim = GetComponent<Animator>();
     }
@@ -31,9 +36,18 @@ public class Enemy_behaviour : MonoBehaviour
     
     void Update()
     {
+        if (!attackMode)
+        {
+            Move();
+        }
+
+        if (!InsideofLimits() && !inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_attack"))
+        {
+            SelectTarget();
+        }
         if (inRange)
         {
-            hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLenght, raycastMask);
+            hit = Physics2D.Raycast(rayCast.position,transform.right, rayCastLenght, raycastMask);
             RayCastDebugger();
         }
 
@@ -47,18 +61,18 @@ public class Enemy_behaviour : MonoBehaviour
 
         if (inRange == false)
         {
-            anim.SetBool("canWalk", false);
+           
             StopAttack();
         }
     }
 
     void EnemyLogic()
     {
-        distance = Vector2.Distance(transform.position, target.transform.position);
+        distance = Vector2.Distance(transform.position, target.position);
 
         if (distance>attackDistance)
         {
-            Move();
+            
             StopAttack();
         }else if (attackDistance >= distance && cooling == false)
         {
@@ -78,7 +92,7 @@ public class Enemy_behaviour : MonoBehaviour
         
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_attack"))
         {
-            Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
+            Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
@@ -92,6 +106,13 @@ public class Enemy_behaviour : MonoBehaviour
         anim.SetBool("canWalk",false );
         anim.SetBool("Attack", true);
     }
+    
+    void StopAttack()
+    {
+        cooling = false;
+        attackMode = false;
+        anim.SetBool("Attack", false);
+    }
 
     void Cooldown()
     {
@@ -104,19 +125,14 @@ public class Enemy_behaviour : MonoBehaviour
         }
     }
     
-    void StopAttack()
-    {
-        cooling = false;
-        attackMode = false;
-        anim.SetBool("Attack", false);
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            target = other.gameObject;
+            target = other.transform;
             inRange = true;
+            Flip();
         }
     }
 
@@ -124,16 +140,54 @@ public class Enemy_behaviour : MonoBehaviour
     {
         if (distance > attackDistance)
         {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLenght, Color.red);
+            Debug.DrawRay(rayCast.position,transform.right * rayCastLenght, Color.red);
         }
         else if (attackDistance > distance)
         {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLenght, Color.green);
+            Debug.DrawRay(rayCast.position, transform.right * rayCastLenght, Color.green);
         }
     }
 
     public void TriggerCooling()
     {
         cooling = true;
+    }
+
+
+    private bool InsideofLimits()
+    {
+        return transform.position.x > leftLimt.position.x && transform.position.x < righLimit.position.x;
+    }
+
+    private void SelectTarget()
+    {
+        float distanceToLeft = Vector2.Distance(transform.position, leftLimt.position);
+        float distanceToRight = Vector2.Distance(transform.position, righLimit.position);
+
+        if (distanceToLeft > distanceToRight)
+        {
+            target = leftLimt;
+        }
+        else
+        {
+            target = righLimit;
+        }
+
+        Flip();
+    }
+
+    private void Flip()
+    {
+        Vector3 rotation = transform.eulerAngles;
+        if (transform.position.x > target.position.x)
+        {
+            rotation.y = 180f;
+        }
+        else
+        {
+            rotation.y = 0f;
+        }
+
+        transform.eulerAngles = rotation;
     }
 }
