@@ -16,13 +16,13 @@ public class Player_Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown(KeyCode.Mouse0))
-        // {
-        //     Attack();
-        //     
-        //     Destroy(GameObject.FindWithTag("boss"));
-        //      
-        // }
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Attack();
+            
+            Destroy(GameObject.FindWithTag("boss"));
+             
+        }
     }
     
     public void Attack()

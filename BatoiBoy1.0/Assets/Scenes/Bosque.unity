@@ -11408,7 +11408,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -103.83161, y: 1.502543, z: -10}
+  m_LocalPosition: {x: -106.71952, y: 1.502543, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14817,7 +14817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971936746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -111.2, y: 0.2, z: 0}
+  m_LocalPosition: {x: -110.3, y: -0.49, z: 0}
   m_LocalScale: {x: 3.4277298, y: 4.142773, z: 1}
   m_Children:
   - {fileID: 1973467908}
@@ -14874,7 +14874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a1cba9b9da0f311aa0593fa77c1636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
+  Speed: 4
   lateralMovement: 2
   jumpMovement: 400
   groundCheck: {fileID: 1973467908}
@@ -20392,7 +20392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea444196870b42d7bf4087915239cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iLevelToLoad: 1
+  iLevelToLoad: 2
   sLevelToLoad: Cueva
   userIntegerToLoadLevel: 1
 --- !u!61 &1867417100
@@ -20642,7 +20642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869544037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -111.2, y: 0.2, z: -10}
+  m_LocalPosition: {x: -110.3, y: -0.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1408697232}

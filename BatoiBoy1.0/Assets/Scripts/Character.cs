@@ -6,7 +6,7 @@ using Cinemachine;
 public class Character : MonoBehaviour
 {
 
-    public float Speed = 0.0f;
+    public float Speed = 4.0f;
     public float lateralMovement = 4.0f;
     public float jumpMovement = 400.0f;
 
@@ -42,47 +42,47 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // grounded = Physics2D.Linecast(transform.position,
-        //     groundCheck.position,
-        //     LayerMask.GetMask("Ground"));
-        //
-        // if (grounded && Input.GetButtonDown("Jump"))
-        // {
-        //     rigidbody2d.AddForce(Vector2.up * jumpMovement);
-        //     audioSource.Play();
-        // }
-        //
-        // if (grounded)
-        //     animator.SetTrigger("Grounded");
-        // else
-        //     animator.SetTrigger("Jump");
-        // Speed = lateralMovement * Input.GetAxis("Horizontal");
-        // transform.Translate(Vector2.right * Speed * Time.deltaTime);
-        // animator.SetFloat("Speed", Mathf.Abs(Speed));
-        // if (Speed < 0)
-        //     transform.localScale = new Vector3(-5, 5, 5);
-        // else
-        //     transform.localScale = new Vector3(5, 5, 5);
-
-    
         grounded = Physics2D.Linecast(transform.position,
             groundCheck.position,
             LayerMask.GetMask("Ground"));
+        
+        if (grounded && Input.GetButtonDown("Jump"))
+        {
+            rigidbody2d.AddForce(Vector2.up * jumpMovement);
+            audioSource.Play();
+        }
+        
         if (grounded)
             animator.SetTrigger("Grounded");
         else
             animator.SetTrigger("Jump");
-        
-        Speed = lateralMovement * movementButton;
-
+        Speed = lateralMovement * Input.GetAxis("Horizontal");
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
-        
         animator.SetFloat("Speed", Mathf.Abs(Speed));
-        
         if (Speed < 0)
             transform.localScale = new Vector3(-5, 5, 5);
         else
             transform.localScale = new Vector3(5, 5, 5);
+
+    
+        // grounded = Physics2D.Linecast(transform.position,
+        //     groundCheck.position,
+        //     LayerMask.GetMask("Ground"));
+        // if (grounded)
+        //     animator.SetTrigger("Grounded");
+        // else
+        //     animator.SetTrigger("Jump");
+        //
+        // Speed = lateralMovement * movementButton;
+        //
+        // transform.Translate(Vector2.right * Speed * Time.deltaTime);
+        //
+        // animator.SetFloat("Speed", Mathf.Abs(Speed));
+        //
+        // if (Speed < 0)
+        //     transform.localScale = new Vector3(-5, 5, 5);
+        // else
+        //     transform.localScale = new Vector3(5, 5, 5);
         
        
     }
