@@ -771,8 +771,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 231.88501, y: 0.35864}
-  m_SizeDelta: {x: 1288.507, y: 663.1}
+  m_AnchoredPosition: {x: 212.9099, y: -18.6165}
+  m_SizeDelta: {x: 1250.5568, y: 701.0502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2075728145
 MonoBehaviour:
@@ -808,12 +808,12 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Entre los siglos XII y XIV, mientras los rumores se iban confirmando, un
-    caballero acorazado se impuso en valentia, cortesia y generosidad y decidio imponerse
+    caballero acorazado motivado por las muertes de su pueblo   decidio imponerse
     ante aquello que atemorizaba a su pueblo. Fue necesario cruzar los densos bosques,
     caminar por oscuras y peligrosas cuevas para llegar a su destino, el desconocido
     castillo medieval. Fue entonces cuando descubrio que todas aquellas voces del
     pueblo solo contaban la verdad, y ahora, no tenia otra opcion, o salia victorioso
-    o trinfaria el mal.
+    o triunfaria el mal.
 --- !u!222 &2075728146
 CanvasRenderer:
   m_ObjectHideFlags: 0

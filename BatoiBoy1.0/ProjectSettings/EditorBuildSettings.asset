@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 45ad1683b912fb55a8fa905906020293
+  - enabled: 1
     path: Assets/Scenes/Bosque.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -15,9 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Castle.unity
     guid: 75815ae08fb353148952492c58489fdd
   - enabled: 1
-    path: Assets/Scenes/Inicio.unity
-    guid: 45ad1683b912fb55a8fa905906020293
-  - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 9198c6306e8090d4bb54ff038af6e053
+  - enabled: 1
+    path: Assets/Scenes/Lore.unity
+    guid: 4ecd42e72a7c3da268c75d9ffaccd5f7
   m_configObjects: {}

@@ -10,12 +10,13 @@ public class Character : MonoBehaviour
     public float lateralMovement = 4.0f;
     public float jumpMovement = 400.0f;
 
-    private float movementButton = 0.0f;
+   
     
     public Transform groundCheck;
     private Animator animator;
     private Rigidbody2D rigidbody2d;
     public bool grounded = true;
+    float movementButton = 0.0f; 
     
     public AudioClip salto;
     private AudioSource audioSource;
@@ -63,7 +64,7 @@ public class Character : MonoBehaviour
         // else
         //     transform.localScale = new Vector3(5, 5, 5);
 
-
+    
         grounded = Physics2D.Linecast(transform.position,
             groundCheck.position,
             LayerMask.GetMask("Ground"));
@@ -71,13 +72,18 @@ public class Character : MonoBehaviour
             animator.SetTrigger("Grounded");
         else
             animator.SetTrigger("Jump");
+        
         Speed = lateralMovement * movementButton;
+
         transform.Translate(Vector2.right * Speed * Time.deltaTime);
+        
         animator.SetFloat("Speed", Mathf.Abs(Speed));
+        
         if (Speed < 0)
             transform.localScale = new Vector3(-5, 5, 5);
         else
             transform.localScale = new Vector3(5, 5, 5);
+        
        
     }
 
@@ -113,4 +119,7 @@ public class Character : MonoBehaviour
         {
             movementButton = amount;
         }
-    }
+        
+        
+
+}
