@@ -10,6 +10,8 @@ public class PantallaInicio : MonoBehaviour
     {
         SceneManager.LoadScene("Bosque");
     }
+
+    
     // Start is called before the first frame update
     void Start()
     {
