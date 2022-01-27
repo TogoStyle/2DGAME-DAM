@@ -3,7 +3,10 @@ guid: 25a1cba9b9da0f311aa0593fa77c1636
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - groundCheck: {instanceID: 0}
+  - salto: {fileID: 8300000, guid: c497db28f1683bc49a7762b476861123, type: 3}
+  - attackPos: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

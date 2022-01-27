@@ -19,7 +19,7 @@ public class BossWeapon : MonoBehaviour
         Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (colInfo != null)
         {
-            SceneManager.LoadScene("Bosque");
+            SceneManager.LoadScene("Castle");
         }
     }
     // Start is called before the first frame update

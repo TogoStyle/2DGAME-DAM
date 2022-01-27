@@ -6,6 +6,7 @@ TagManager:
   tags:
   - zoom
   - mobilePlattform
+  - boss
   layers:
   - Default
   - TransparentFX
@@ -66,4 +67,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2185513151
+    locked: 0
+  - name: Enemies
+    uniqueID: 2056301821
     locked: 0

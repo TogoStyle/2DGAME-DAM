@@ -23,7 +23,7 @@ public class Enemy_behaviour : MonoBehaviour
     private bool inRange;
     private bool cooling;
     private float intTimer;
-    
+    public Transform player;
 
 
     void Awake()
@@ -140,6 +140,7 @@ public class Enemy_behaviour : MonoBehaviour
     {
         if (distance > attackDistance)
         {
+           
             Debug.DrawRay(rayCast.position,transform.right * rayCastLenght, Color.red);
         }
         else if (attackDistance > distance)

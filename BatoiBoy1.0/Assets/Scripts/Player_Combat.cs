@@ -19,6 +19,8 @@ public class Player_Combat : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Attack();
+            
+            Destroy(GameObject.FindWithTag("boss"));
              
         }
     }
@@ -30,6 +32,7 @@ public class Player_Combat : MonoBehaviour
        foreach (Collider2D enemy in hitEnemies)
        {
            enemy.GetComponent<Enemy>().Takedamage(attackDamage);
+           Destroy(GameObject.FindWithTag("boss"));
        }
     }
 
