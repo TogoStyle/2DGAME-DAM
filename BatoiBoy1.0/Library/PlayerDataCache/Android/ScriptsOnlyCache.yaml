@@ -86,10 +86,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -201,7 +199,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7814}
     - Class: 114
-      Script: {instanceID: 23526}
+      Script: {instanceID: 21514}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -2760,4 +2758,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Castle.unity
   - Assets/Scenes/Ending.unity
   - Assets/Scenes/Lore.unity
-  playerPath: C:/Users/Karlo/Desktop/versionMovil2.apk
+  playerPath: C:/Users/Karlo/Desktop/DAM Segundo Curso/PMDM/Juego 2D/2DGAME/apk mvl/versionMovil.apk
