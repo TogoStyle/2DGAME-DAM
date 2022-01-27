@@ -1,10 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Karlo\\Desktop\\DAM Segundo Curso\\PMDM\\Juego 2D\\2DGAME\\BatoiBoy1.0\\Temp\\gradleOut\\launcher\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "outputFile": "/home/tonivr/UnityProjects/2DGAME/BatoiBoy1.0/Temp/gradleOut/launcher/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Karlo\\Desktop\\DAM Segundo Curso\\PMDM\\Juego 2D\\2DGAME\\BatoiBoy1.0\\Temp\\gradleOut\\launcher\\src\\main\\res\\values\\styles.xml",
+                    "source": "/home/tonivr/UnityProjects/2DGAME/BatoiBoy1.0/Temp/gradleOut/launcher/src/main/res/values/ids.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "46",
+                        "endOffsets": "97"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "45",
+                        "endOffsets": "96"
+                    }
+                },
+                {
+                    "source": "/home/tonivr/UnityProjects/2DGAME/BatoiBoy1.0/Temp/gradleOut/launcher/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "5,2,7",
                         "startColumns": "0,0,0",
@@ -23,30 +40,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Karlo\\Desktop\\DAM Segundo Curso\\PMDM\\Juego 2D\\2DGAME\\BatoiBoy1.0\\Temp\\gradleOut\\launcher\\src\\main\\res\\values\\ids.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "46",
-                        "endOffsets": "97"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "45",
-                        "endOffsets": "96"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Karlo\\Desktop\\DAM Segundo Curso\\PMDM\\Juego 2D\\2DGAME\\BatoiBoy1.0\\Temp\\gradleOut\\launcher\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/tonivr/UnityProjects/2DGAME/BatoiBoy1.0/Temp/gradleOut/launcher/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "2,2",
-                        "startOffsets": "55,109",
+                        "startOffsets": "53,106",
                         "endColumns": "52,65",
-                        "endOffsets": "105,172"
+                        "endOffsets": "103,169"
                     },
                     "to": {
                         "startLines": "3,4",

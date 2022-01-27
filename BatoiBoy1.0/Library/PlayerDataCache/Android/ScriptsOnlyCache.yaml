@@ -81,7 +81,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     Unity.Rider.Editor.dll:
-    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -199,7 +198,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7814}
     - Class: 114
-      Script: {instanceID: 21514}
+      Script: {instanceID: 62934}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -2758,4 +2757,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Castle.unity
   - Assets/Scenes/Ending.unity
   - Assets/Scenes/Lore.unity
-  playerPath: C:/Users/Karlo/Desktop/DAM Segundo Curso/PMDM/Juego 2D/2DGAME/apk mvl/versionMovil.apk
+  playerPath: /home/tonivr/UnityProjects/2DGAME/BatoiBoy1.0/BatoiBoy.apk
